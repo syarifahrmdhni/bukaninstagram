@@ -1,6 +1,6 @@
 function onSignIn (googleUser) {
     var profile = googleUser.getBasicProfile ();
-    console.log('Full Name: ' + profile.getName());
+    console.log("Full Name: " + profile.getName());
     console.log("Email: " + profile.getEmail());
 
     var x = documents.getElementsByClassName("logged");
@@ -13,7 +13,7 @@ function onSignIn (googleUser) {
 function onSignOut () {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
-        console.log('User Sign Out.')
+        console.log("User Sign Out.")
         hideDashboard();
     });
 }
